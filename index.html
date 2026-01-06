@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jordan Cue Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="brand-name">Jonathan</div>
+        <div class="brand-sub">Premium Cue Products Made By Jonathan</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#shop">Shop</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <button class="cart-btn" id="openCart">
+      🛒 Cart <span class="pill" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- HERO -->
+  <section class="hero" id="why">
+    <div class="hero-card">
+      <div class="chip">⚡ Fast shipping • Trusted quality</div>
+      <h1>Make your cue shop look <span class="grad">premium</span>.</h1>
+      <p class="hero-sub">
+        Modern layout, strong product cards, search + filter, and a cart popup.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#shop">Shop Now</a>
+        <button class="btn ghost" id="openCart2">View Cart</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span>⭐</span><b>4.8+</b><small>Ratings</small></div>
+        <div class="stat"><span>🧰</span><b>Accessories</b><small>Tips, Chalk, Cases</small></div>
+        <div class="stat"><span>🚚</span><b>1–3 Days</b><small>Delivery*</small></div>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <div class="deal">
+        <div>
+          <b>🔥 Today’s Deal</b>
+          <p>10% off orders above $600</p>
+        </div>
+        <div class="code">Jordanluvu</div>
+      </div>
+
+      <div class="glass">
+        <b>Why customers buy</b>
+        <ul>
+          <li>Premium presentation</li>
+          <li>Clear pricing & info</li>
+          <li>Smooth checkout UI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="controls" id="shop">
+    <div class="search">
+      🔎 <input id="searchInput" placeholder="Search cues, chalk, tips..." />
+    </div>
+
+    <div class="select">
+      Category:
+      <select id="categorySelect">
+        <option value="all">All</option>
+        <option value="cue">Cues</option>
+        <option value="shaft">Shafts</option>
+        <option value="tip">Tips</option>
+        <option value="chalk">Chalk</option>
+        <option value="case">Cases</option>
+        <option value="accessory">Accessories</option>
+      </select>
+    </div>
+
+    <div class="select">
+      Sort:
+      <select id="sortSelect">
+        <option value="featured">Featured</option>
+        <option value="low">Price: Low → High</option>
+        <option value="high">Price: High → Low</option>
+        <option value="rating">Rating</option>
+      </select>
+    </div>
+  </section>
+<!-- SELLER / TRUST SECTION -->
+<section class="trust">
+  <div class="sellerCard">
+    <div class="sellerLeft">
+      <img class="sellerAvatar" src="images/brand.jpg" alt="Seller"
+        onerror="this.style.display='none'; document.querySelector('.sellerInitials').style.display='grid';">
+      <div class="sellerInitials" style="display:none;">DV</div>
+      <div class="sellerInfo">
+        <div class="sellerName">Billiard Store <span class="verified">Verified</span></div>
+        <div class="sellerMeta">
+          <span>📍 Singapore</span>
+          <span>⚡ Replies in ~1 hour</span>
+          <span>🛡️ PayNow supported</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sellerRight">
+      <a class="contactBtn" href="https://wa.me/6598685780?text=Hi%20Jonathan!%20I%20would%20like%20to%20ask%20about%20your%20cue%20products." target="_blank">
+        WhatsApp
+      </a>
+      <div class="miniNote">Fast questions? Tap WhatsApp</div>
+    </div>
+  </div>
+
+  <div class="policyGrid">
+    <div class="policy">
+      <div class="policyTitle">🚚 Shipping</div>
+      <div class="policyText">Ships within <b>1–2 working days</b>. Tracking provided when available.</div>
+    </div>
+
+    <div class="policy">
+      <div class="policyTitle">💳 Payment</div>
+      <div class="policyText"><b>PayNow</b> (manual verification). COD available if you enable it.</div>
+    </div>
+
+    <div class="policy">
+      <div class="policyTitle">🔁 Returns</div>
+      <div class="policyText">Return within <b>7 days</b> if unused & in original packaging.</div>
+    </div>
+
+    <div class="policy">
+      <div class="policyTitle">✅ Quality</div>
+      <div class="policyText">We check items before shipping. Damaged item? We’ll help.</div>
+    </div>
+  </div>
+</section>
+
+  <!-- PRODUCTS -->
+  <section class="grid" id="productGrid"></section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="panel">
+      <h2>FAQ</h2>
+      <div class="q">
+        <b>Is this real Shop</b>
+        <p>Yes. This is Jonathan Shop , it is reputation.</p>
+      </div>
+      <div class="q">
+        <b>How do I buy this?</b>
+        <p>Simply add items to your cart and proceed to checkout, then we'll handle the rest.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>© <b>CUEVA</b> — store page</div>
+    <div class="footer-links">
+      <a href="#shop">Shop</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </footer>
+</main>
+
+<!-- CART MODAL -->
+<div class="backdrop" id="backdrop">
+  <div class="modal">
+    <div class="modal-h">
+      <b>🛒 Your Cart</b>
+      <button class="x" id="closeCart">✕</button>
+    </div>
+
+    <div class="modal-b">
+      <div class="cart-list" id="cartList"></div>
+
+      <div class="summary">
+        <div class="row"><span>Subtotal</span><b id="subTotal">$0.00</b></div>
+        <div class="row"><span>Shipping</span><b id="ship">$0.00</b></div>
+        <div class="row total"><span>Total</span><b id="total">$0.00</b></div>
+
+        <button class="btn primary full" id="checkoutBtn">✅ Checkout</button>
+        <button class="btn ghost full" id="clearBtn">🧹 Clear Cart</button>
+
+        <div class="ok" id="okMsg">✅ Order created. Next: Contact with Jonathan's whatsapp</div>
+        <!-- Customer form shown in the modal when cart is opened -->
+        <div id="checkoutForm" style="display:none; margin-top:12px;">
+          <div class="field">
+            <label>Your Name</label>
+            <input id="custName" placeholder="e.g. Jonathan Tay">
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input id="custPhone" placeholder="e.g. +6512345678" />
+          </div>
+          <div class="field">
+            <label>Address</label>
+            <input id="custAddress" placeholder="Delivery address" />
+          </div>
+          <div class="field">
+            <label>Payment Method</label>
+            <select id="payMethod">
+              <option value="PayNow">PayNow</option>
+              <option value="CashOnDelivery">Cash on Delivery</option>
+            </select>
+          </div>
+          <button class="btn primary full" id="placeOrderBtn">✅ Thanks For Placing Our Products</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PayNow Backdrop (simple modal) -->
+<div class="backdrop" id="paynowBackdrop" style="display:none; align-items:center; justify-content:center;">
+  <div class="pay-modal" style="background:#2b3b56; padding:18px; border-radius:8px; max-width:360px; text-align:center;">
+    <h3>PayNow QR</h3>
+    <p>Scan this QR and pay with your id Order.</p>
+    <img src="images/paynow.jpg" alt="PayNow QR Code" style="width:100%; max-width:200px; margin:12px auto;">
+    <div style="margin-top:12px;">
+      <button class="btn" id="closePaynow">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
